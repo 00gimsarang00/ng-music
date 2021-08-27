@@ -1,7 +1,6 @@
 # Music_Player
 </br></br>
-[![](https://jitpack.io/v/00gimsarang00/ng-player.svg)](https://jitpack.io/#00gimsarang00/ng-player)
-
+[![](https://jitpack.io/v/00gimsarang00/ng-music.svg)](https://jitpack.io/#00gimsarang00/ng-music)
 
 A simple audio player for Android that you can plugin to your apps quickly get audio playback working.
 </br></br>
@@ -27,6 +26,6 @@ allprojects {
 ```Gradle
 dependencies {
     // ... other dependencies
-	implementation 'com.github.00gimsarang00:ng-player:1.0.3'
+	implementation 'com.github.00gimsarang00:ng-music:1.0.0'
 }
 ```
