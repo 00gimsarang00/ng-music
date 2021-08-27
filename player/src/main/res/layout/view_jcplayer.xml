@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.jean.jcplayer.view.JcPlayerView">
+
+
+
+
+
+    <View
+        android:id="@+id/view_stub"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnNext"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        app:layout_constraintStart_toEndOf="@id/btnPrev"
+        app:layout_constraintTop_toTopOf="@id/btnPrev" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:background="@null"
+        android:contentDescription="@string/description_play_button"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/view_stub"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        app:layout_constraintStart_toEndOf="@id/btnPrev"
+        app:layout_constraintTop_toTopOf="@id/view_stub"
+        app:srcCompat="@drawable/ic_play" />
+
+
+
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:background="@null"
+        android:contentDescription="@string/description_play_button"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/view_stub"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        app:layout_constraintStart_toEndOf="@id/btnPrev"
+        app:layout_constraintTop_toTopOf="@id/view_stub"
+
+        app:srcCompat="@drawable/ic_pause" />
+
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:background="@null"
+        android:contentDescription="@string/description_next_button"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ui_next" />
+
+    <ProgressBar
+        android:id="@+id/progressBarPlayer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#888484"
+        app:layout_constraintBottom_toBottomOf="@id/view_stub"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        app:layout_constraintStart_toEndOf="@id/btnPrev"
+        app:layout_constraintTop_toTopOf="@id/view_stub"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:background="@null"
+        android:contentDescription="@string/description_previous_button"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ui_previous" />
+
+
+    <TextView
+        android:id="@+id/playertime"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="#969DA8"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_stub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
